@@ -1,0 +1,17 @@
+node_modules/
+*.ref
+*.crf
+*.d
+*.dep
+*.axf
+*.elf
+*.mk
+*.object
+*.bin
+*.map
+*.pyc
+*.out
+
+# Eclipse setting directory
+.setting/
+.idea/
