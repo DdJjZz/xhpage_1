@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一体化卫勤决策平台</title>
+    <link href="./css/jquery-ui.css" rel="stylesheet">
+    <link href="./css/demo.css" rel="stylesheet">
+    <link href="./css/vue.css" rel="stylesheet">
+    <link href="./css/prism/prism.css" rel="stylesheet">
+    <link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="./resource/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./resource/css/bootstrap-duallistbox.min.css" rel="stylesheet"/>
+    <link href="./resource/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="./resource/css/buttons.dataTables.min.css" rel="stylesheet">
+    <!-- Custom styling plus plugins -->
+
+    <!--link href="./css/dataTables.tableTools.min.css" rel="stylesheet"-->
+
+    <link href="./resource/switchery/switchery.min.css" rel="stylesheet">
+    <link href="./resource/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="./resource/css/custom.css" rel="stylesheet">
+    <link href="./css/nprogress.css" rel="stylesheet">
+    <link href="./css/scope.css" rel="stylesheet">
+    <link href="./css/left.css" rel="stylesheet">
+    <script src="./resource/js/jquery.min.js"></script>
+
+    <script src="./resource/js/jquery-ui.js"></script>
+    <!--<script src="./resource/js/typehead.js"></script>-->
+    <script src="./resource/js/bootstrap.min.js"></script>
+    <script src="./resource/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="./resource/js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="./resource/js/table/jquery.dataTables.min.js"></script>
+    <script src="./resource/js/echarts-all-3.js"></script>
+    <script src="./js/xmlayout.min.js"></script>
+    <script src="./js/layout.js"></script>
+
+</head>
+<body>
+<header role="banner" id="fh5co-header">
+    <div class="container" style="height: 60px;">
+        <nav class="navbar navbar-default"
+             style="height: 60px;line-height: 60px;background-color: #54946a;color: #fff;border-radius: 0px">
+            <div style="height: 60px;display:inline-table;width:100%">
+                <div style="float: left;height: 60px;width: 240px;font-size: 22px;padding-left: 20px;padding-right: 20px;border-color: rgba(238, 241, 146, 0.3);" id="page_name">
+                    系统维护
+                </div>
+
+                <div style="width:150px;height:36px;float: right; ">
+                    <div class="dropdown" style="width: 100%;text-align: right;padding-right: 35px;float: right;">
+                            <span href="#" data-toggle="dropdown"
+                                  style="display: inline-block;position: relative;color: #fff;font-size: 14px;"
+                                  role="button" tabindex="0" id="user_type">
+                                管理人员
+                                <img style="cursor: pointer;color: #fff;width: 40px;height: 40px;border-radius: 20px;margin: 10px 0px 10px 10px;float: right;"
+                                     src="./static/picture/user.jpg">
+                            </span>
+                        <ul class="dropdown-menu" style="left: -10px;height: 40px">
+                            <li><a href="./Login1.html" style="font-size: 14px;padding: 10px 0px 0px 18px" >退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--<div class="clearfix"></div>-->
+<div style="height:calc(100% - 60px);width:calc(100%);">
+    <div id="workspace" style="width: 100%">
+    </div>
+</div>
+</body>
+
+</html>

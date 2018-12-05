@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一体化卫勤决策平台</title>
+    <link href="./resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./resource/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./resource/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="./css/nprogress.css" rel="stylesheet">
+    <link href="./css/scope.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/shCoreDefault.css"/>
+    <!--<link type="text/css" rel="stylesheet" href="./AssetsChart/Css/sample.css"/>-->
+    <link rel="stylesheet" type="text/css" href="./Assets/Kool.css"/>
+    <link rel="stylesheet" type="text/css" href="./AssetsChart/Css/KoolChart.css"/>
+    <script src="./resource/js/bmqtt.js"></script>
+    <script src="./resource/js/jquery.min.js"></script>
+    <script src="./resource/js/bootstrap.min.js"></script>
+    <!--<script src="./resource/js/charts/jquery.flot.js"></script> &lt;!&ndash; Flot Main &ndash;&gt;-->
+    <!--<script src="./resource/js/charts/jquery.flot.time.js"></script> &lt;!&ndash; Flot sub &ndash;&gt;-->
+    <!--<script src="./resource/js/charts/jquery.flot.animator.min.js"></script> &lt;!&ndash; Flot sub &ndash;&gt;-->
+    <!--<script src="./resource/js/charts/jquery.flot.resize.min.js"></script>-->
+    <!--<script src="./resource/js/charts/jquery.flot.orderBar.js"></script> &lt;!&ndash; Flot Bar chart &ndash;&gt;-->
+    <!--<script src="./resource/js/charts/jquery.flot.pie.min.js"></script> &lt;!&ndash; Flot Pie chart &ndash;&gt;-->
+    <!--<script src="./resource/js/sparkline.min.js"></script> &lt;!&ndash; Sparkline - Tiny charts &ndash;&gt;-->
+    <!--<script src="./resource/js/gridHoldereasypiechart.js"></script> &lt;!&ndash; EasyPieChart - Animated Pie Charts &ndash;&gt;-->
+    <!--<script src="./resource/js/Chart.bundle.min.js"></script> &lt;!&ndash; chart.js &ndash;&gt;-->
+    <!--<script src="./resource/js/Chart.min.js"></script> &lt;!&ndash; chart.js &ndash;&gt;-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=2Pcn24FAWGTcyW4jsC8O38IyPd0pDZYX"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/main5.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./XHJS/xhRealtimeChart.js"></script>
+    <script type="text/javascript" src="./XHJS/xhGrid.js"></script>
+    <script type="text/javascript" src="./XHJS/xhChart.js"></script>
+    <script type="text/javascript" src="./AssetsChart/Theme/theme.js"></script>
+    <script type="text/javascript" src="./js/DJZEdit1.js"></script>
+    <script type="text/javascript" src="./XHJS/shCore.js"></script>
+    <script type="text/javascript" src="./XHJS/shBrushJScript.js"></script>
+
+</head>
+<body>
+<div id="ArmyMap" class="baidu-maps" style=position:absolute;overflow-x:hidden;overflow-y:hidden;z-index:0></div>
+<div id="MainStatistic" style="position:absolute;top:65px;left:625px;background: rgba(0,0,0,0.2);z-index:1;border:1px solid #99ffff"></div>
+<div id="MainNote" style="position:absolute;top:65px;right:25px;background: rgba(0,0,0,0.2);z-index:4;"></div>
+<header role="banner" id="fh5co-header">
+    <div class="container">
+        <nav class="navbar navbar-default" style="background-color: #54946a">
+            <div class="navbar-header" align="center" style="width: calc(100% - 150px)">
+                <h3>战时伤员生命体征遥感监测及实时大数据处理的卫勤决策平台</h3>
+            </div>
+            <div class="pull-right" style="width:150px;height:36px;margin-top: 7px;float:right;">
+                <iframe class="pull-right" width='150' scrolling="no" height="36" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=99&icon=1&num=3&site=12"></iframe>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="block-title" style="position:fixed;top:50px;z-index:4;width:25%;padding: 0px 0px 0px 0px" id="leftrow">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div id="tableHover">
+            <h3 class="block-title" style="z-index: 1;position: fixed;top:56px;">卫生资源</h3>
+            <div id="gridHolder"></div>
+        </div>
+        <div id="tableHover1">
+            <h3 class="block-title">战伤占比</h3>
+            <div id="gridHolder1" style="float: left"></div>
+        </div>
+    </div>
+</div>
+<div class="block-title" id="bottomRow" style=" position:fixed;bottom:2px;left:3px; z-index:4; width: 100%;padding: 0px 0px 0px 0px">
+    <div class="col-md-3 col-sm-3 col-xs-3">
+        <div>
+            <h3 class="block-title">医疗救护信息</h3>
+            <div id="gridHolder2"></div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3" >
+        <div>
+            <h3 class="block-title">医技保障</h3>
+            <div id="gridHolder3"></div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3">
+        <div>
+            <h3 class="block-title">分类后送</h3>
+            <div id="gridHolder4"></div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3">
+        <div>
+            <h3 class="block-title" style="position:fixed">伤员信息</h3>
+            <div id="gridHolder5"></div>
+        </div>
+    </div>
+</div>
+<div id="GuildMap" style="display:none"/>
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+<div id="doctor_view_page" class="panel panel-default container"
+     style="background-color: #F2F5F7;margin-bottom: 0px;min-height: 100%" style="overflow:scroll;overflow-y: hidden;">
+    <div style="background-color: #F2F5F7;padding-top: 10px;">
+        <div id="wounded_page" class="panel panel-heading container"
+             style="padding: 10px 25px 10px 25px;box-shadow:grey 2px 2px 2px 2px;width: 97%;border-radius: 0px"
+             align="center" style="overflow:scroll;overflow-y: hidden;">
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#panel-wounded" data-toggle="tab" style="font-size: 15px"><i
+                                    class="fa fa-calendar"></i>&nbsp&nbsp伤员伤票</a>
+                        </li>
+                        <li>
+                            <a href="#panel-Ximg" data-toggle="tab" style="font-size: 15px"><i
+                                    class="fa fa-calendar"></i>&nbsp&nbsp伤员X光图像</a>
+                        </li>
+                        <li>
+                            <a href="#panel-advice" data-toggle="tab" style="font-size: 15px"><i
+                                    class="fa fa-calendar"></i>&nbsp&nbsp伤员医嘱</a>
+                        </li>
+                    </ul>
+                    <div style="height: 10px;width: 100%"></div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-wounded">
+                            <div id="wounded_panel" class="panel panel-default" style="width: 100%;height:350px;float: left;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        伤员基本信息
+                                    </h4>
+                                </div>
+                                <div class="panel-body" style="padding: 15px 10px 10px 10px">
+                                    <div style="float: left;width:10%;text-align: left">
+                                        <h5 style="font-size: 16px">姓名：</h5>
+                                        <h5 style="font-size: 16px">性别：</h5>
+                                        <h5 style="font-size: 16px">出生日期：</h5>
+                                        <h5 style="font-size: 16px">血型：</h5>
+                                        <h5 style="font-size: 16px">保障卡号：</h5>
+                                        <h5 style="font-size: 16px">负伤时间：</h5>
+                                        <h5 style="font-size: 16px">送达时间：</h5>
+                                        <h5 style="font-size: 16px">后送时间：</h5>
+                                        <h5 style="font-size: 16px">呼吸：</h5>
+                                    </div>
+                                    <div style="float: left;width:20%;text-align: right" id="wounded_detail">
+                                        <h5>姓名：</h5>
+                                        <h5>性别：</h5>
+                                        <h5>出生日期：</h5>
+                                        <h5>血型：</h5>
+                                    </div>
+                                    <div style="float: left;width: 5%;height: 200px"></div>
+                                    <div style="float: left;width:40%;height:300px;" id="container">
+                                    </div>
+                                    <div style="float: left;width: 5%;height: 200px"></div>
+                                    <div style="float: left;width:20%;height:280px;" id="wounded_img">
+                                        <img src="./static/picture/user.jpg" style="height: 280px">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-default " style="width: 100px;float: left" id="submit_msg">伤票处理</button>
+                            <div class="panel panel-default" style="width: 100%;height:70px;float: left;">
+                                <div class="panel-body" style="width: 100%;height:70px;">
+                                    <!--<div style="float: left;width:10%;text-align: left;padding: 5px 10px 10px 10px">-->
+                                    <!--<span style="font-size: 20px">伤员病情：</span>-->
+                                    <!--</div>-->
+                                    <!--<div class="btn-group" id="color" data-toggle="buttons">-->
+
+                                        <!--<label class="btn btn-default">-->
+                                            <!--<input type="checkbox" class="toggle" value="1"> 红色-->
+                                        <!--</label>-->
+                                        <!--<label class="btn btn-default">-->
+                                            <!--<input type="checkbox" class="toggle" value="2"> 绿色-->
+                                        <!--</label>-->
+                                        <!--<label class="btn btn-default">-->
+                                            <!--<input type="checkbox" class="toggle" value="3"> 蓝色-->
+                                        <!--</label>-->
+                                    <!--</div>-->
+                                    <div style="float: left;width:10%;text-align: left;padding: 5px 10px 10px 10px">
+                                        <span style="font-size: 20px">伤员伤情：</span>
+                                    </div>
+                                    <label class="radio" style="float: left;width: 15%;">
+                                        <input type="radio" name="injury" value="1" checked><span style="font-size: 16px">危重死亡</span>
+                                    </label>
+                                    <label class="radio" style="float: left;width: 15%;padding: 15px 10px 10px 10px">
+                                        <input type="radio" name="injury" value="2" ><span style="font-size: 16px">重度</span>
+                                    </label>
+                                    <label class="radio" style="float: left;width: 15%;padding: 15px 10px 10px 10px">
+                                        <input type="radio" name="injury" value="3" ><span style="font-size: 16px">中度</span>
+                                    </label>
+                                    <label class="radio" style="float: left;width: 15%;padding: 15px 10px 10px 10px">
+                                        <input type="radio" name="injury" value="4" ><span style="font-size: 16px">轻度</span>
+                                    </label>
+                                    <label class="radio" style="float: left;width: 15%;padding: 15px 10px 10px 10px">
+                                        <input type="radio" name="injury" value="5" ><span style="font-size: 16px">紧急处理</span>
+                                    </label>
+                                    <label class="radio" style="float: left;width: 15%;padding: 15px 10px 10px 10px">
+                                        <input type="radio" name="injury" value="6" ><span style="font-size: 16px">放射处理</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="width: 100%;height:70px;float: left;">
+                                <div class="panel-body">
+                                    <div style="float: left;width:10%;height:70px;text-align: left;padding: 5px 10px 10px 10px">
+                                        <span style="font-size: 20px">伤&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp部：</span>
+                                    </div>
+                                    <label class="checkbox" style="float: left;width: 10%;">
+                                        <input type="checkbox" name="part" value="1" ><span style="font-size: 16px">头部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="2" ><span style="font-size: 16px">面部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="3" ><span style="font-size: 16px">颈部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="4" ><span style="font-size: 16px">上肢</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="5" ><span style="font-size: 16px">下肢</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="6" ><span style="font-size: 16px">胸部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="7" ><span style="font-size: 16px">背部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="8" ><span style="font-size: 16px">腹部</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="part" value="9" ><span style="font-size: 16px">其他</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="width: 100%;height:70px;float: left;">
+                                <div class="panel-body" style="padding: 15px 10px 10px 10px">
+                                    <div style="float: left;width:10%;height:70px;text-align: left;padding: 5px 10px 10px 10px">
+                                        <span style="font-size: 20px">伤&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp类：</span>
+                                    </div>
+                                    <label class="checkbox" style="float: left;width: 10%;">
+                                        <input type="checkbox" name="category" value="1" ><span style="font-size: 16px">炸伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="2" ><span style="font-size: 16px">枪弹伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="3" ><span style="font-size: 16px">冻伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="4" ><span style="font-size: 16px">刃器伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="5" ><span style="font-size: 16px">烧伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="6" ><span style="font-size: 16px">挤压伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="7" ><span style="font-size: 16px">挤压伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="8" ><span style="font-size: 16px">撞击伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="category" value="9" ><span style="font-size: 16px">复合伤</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="panel panel-default" style="width: 100%;height:70px;float: left;">
+                                <div class="panel-body" style="padding: 15px 10px 10px 10px">
+                                    <div style="float: left;width:10%;height:70px;text-align: left;padding: 5px 10px 10px 10px">
+                                        <span style="font-size: 20px">伤&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp型：</span>
+                                    </div>
+                                    <label class="checkbox" style="float: left;width: 10%;">
+                                        <input type="checkbox" name="type" value="1" ><span style="font-size: 16px">骨折</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="2" ><span style="font-size: 16px">贯通伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="3" ><span style="font-size: 16px">断肢</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="4" ><span style="font-size: 16px">穿透伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="5" ><span style="font-size: 16px">断指</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="6" ><span style="font-size: 16px">盲管伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="7" ><span style="font-size: 16px">切残伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="8" ><span style="font-size: 16px">组织伤</span>
+                                    </label>
+                                    <label class="checkbox" style="float: left;width: 10%;padding: 15px 10px 10px 10px">
+                                        <input type="checkbox" name="type" value="9" ><span style="font-size: 16px">其他</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="panel-Ximg">
+                            <div class="container">
+                                <div class="carousel slide" id="carousel"
+                                     style="width: 75%;height: 75%;float: left;background-color: black">
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-slide-to="0" data-target="#carousel">
+                                        </li>
+                                        <li data-slide-to="1" data-target="#carousel">
+                                        </li>
+                                        <li data-slide-to="2" data-target="#carousel">
+                                        </li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img src="./static/picture/xLight.jpg" style="width: 100%;height: 100%;"/>
+                                        </div>
+                                        <div class="item">
+                                            <img src="./static/picture/xLight.jpg" style="width: 100%;height: 100%;"/>
+                                        </div>
+                                        <div class="item">
+                                            <img src="./static/picture/xLight.jpg" style="width: 100%;height: 100%;"/>
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#carousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left">
+                                        </span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right">
+                                        </span>
+                                    </a>
+                                </div>
+                                <div style="width: 20%;float:right;box-shadow:grey 2px 2px 2px 2px;">
+                                    <div style="float: left;padding: 10px 10px 10px 10px;text-align: left" id="x_img_msg">
+                                        <h5>伤情01：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid;"></div>
+                                        <h5>伤情02：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情03：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情04：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情05：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情06：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情07：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情08：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情09：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情10：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情11：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情12：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情13：肋骨断裂</h5>
+                                        <div style="border: 1px;border-color: #D3D3D3;border-style: solid"></div>
+                                        <h5>伤情14：肋骨断裂</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="panel-advice">
+                            <button class="btn btn-default"
+                                    style="float: left;background-color: #32CD32;color: white;width: 100px;height: 40px">
+                                生成医嘱
+                            </button>
+                            <div>
+                                <img src="./static/picture/advice_temp.png" style="width: 100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/rightDoctor.js"></script>

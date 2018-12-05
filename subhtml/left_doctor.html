@@ -1,0 +1,43 @@
+<div id="doctor_view_page" class="panel panel-default container"
+     style="background-color: #F2F5F7;margin-bottom: 0px;min-height: 100%" style="overflow:scroll;overflow-y: hidden;">
+    <div style="background-color: #F2F5F7;padding-top: 10px;">
+        <div id="table_page" class="panel panel-heading container"
+             style="padding: 10px 25px 10px 25px;box-shadow:grey 2px 2px 2px 2px;width: 95%;height:850px;border-radius: 0px"
+             align="center" style="overflow:scroll;overflow-y: hidden;">
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#panel-258476" data-toggle="tab" style="font-size: 15px"><i class="fa fa-medkit"></i>&nbsp&nbsp本医院伤员列表</a>
+                        </li>
+                    </ul>
+                    <div style="height: 10px"></div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-258476">
+                            <div class="container">
+                                <div class="input-group" style="padding: 10px 0px 0px 0px;">
+                                    <input type="text" class="form-control" placeholder="请输入姓名" style="width: 70%;border-radius: 3px" id="solider_name">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default form-control" style="border-radius: 3px" id="solider_search">&nbsp&nbsp&nbsp查&nbsp&nbsp&nbsp询&nbsp&nbsp&nbsp</button>
+                                    </span>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column col-lg-20">
+                                        <table class="table table-hover table-bordered" id="solider_table" style="cursor: pointer;">
+                                        </table>
+                                    </div>
+                                    <div class="col-md-12 column">
+                                        <ul class="pagination" style="float: right;cursor: pointer;"
+                                            id="page_control">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/doctor.js"></script>

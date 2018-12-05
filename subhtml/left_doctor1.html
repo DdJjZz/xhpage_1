@@ -1,0 +1,229 @@
+<div id="doctor_view_page" class="panel panel-default container"
+     style="background-color: #F2F5F7;margin-bottom: 0px;min-height: 100%" style="overflow:scroll;overflow-y: hidden;">
+    <div style="background-color: #F2F5F7;padding-top: 10px;">
+        <div id="hospital_page" class="panel panel-heading container"
+             style="padding: 10px 25px 10px 25px;box-shadow:grey 2px 2px 2px 2px;width: 98%;height:840px;border-radius: 0px"
+             align="center" style="overflow:scroll;overflow-y: hidden;">
+            <div class="row clearfix">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#panel-258476" data-toggle="tab" style="font-size: 15px"><i
+                                    class="fa fa-medkit"></i>&nbsp&nbsp本医院伤员列表</a>
+                        </li>
+                    </ul>
+                    <div style="height: 10px"></div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-258476">
+                            <div class="container">
+                                <div class="input-group" style="padding: 10px 0px 0px 0px;">
+                                    <input type="text" class="form-control" placeholder="请输入姓名"
+                                           style="width: 60%;border-radius: 3px" id="patient_name">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary form-control"
+                                                style="border-radius: 3px;color: white" id="hospital_patient_seach">&nbsp&nbsp&nbsp查&nbsp&nbsp&nbsp询&nbsp&nbsp&nbsp</button>
+                                    </span>
+                                    <span class="input-group-btn">
+                                        <div style="width: 10%;height: 1px"></div>
+                                    </span>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info form-control"
+                                                href="#modal-container-299830" data-toggle="modal"
+                                                style="border-radius: 3px;color: white" id="hospital_patient_add">&nbsp&nbsp&nbsp新&nbsp&nbsp&nbsp增&nbsp&nbsp&nbsp</button>
+                                    </span>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-md-12 column col-lg-20">
+                                        <table class="table table-hover table-bordered" id="hospital_table">
+                                        </table>
+                                    </div>
+                                    <div class="col-md-12 column">
+                                        <ul class="pagination" style="float: right;cursor: pointer;"
+                                            id="hospital_control">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-container-299830" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 50%;padding-top: 180px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="hospitalModalTitle">
+                    新增伤员信息
+                </h4>
+            </div>
+            <div class="modal-body" id="myModalContent" style="height:520px;width: 100%">
+                <!--<div style="display: none" id="change_div">-->
+                <!--<div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px">-->
+                <!--住院日期&nbsp&nbsp-->
+                <!--</div>-->
+                <!--<div style="float: left;width: 90%;text-align: left;font-size: 18px;padding:0px 130px 0px 0px">-->
+                <!--<input type="text" class="form-control" placeholder="请选择日期" aria-describedby="basic-addon1" id="change_date"/>-->
+                <!--</div>-->
+                <!--<div style="float:left;height: 20px;width: 100%">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div id="add_date_div">
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px"
+                         id="date_title">
+                        &nbsp&nbsp日&nbsp&nbsp期&nbsp&nbsp
+                    </div>
+                </div>
+                <div id="change_date_div" style="display: none">
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px"
+                         id="date_title">
+                        住院日期&nbsp&nbsp
+                    </div>
+                </div>
+                <div id="translater_date_div" style="display: none">
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px"
+                         id="date_title">
+                        转院日期&nbsp&nbsp
+                    </div>
+                </div>
+                <div style="float: left;width: 90%;text-align: left;font-size: 18px;padding:0px 130px 0px 0px">
+                    <input type="text" class="form-control" placeholder="请选择日期" aria-describedby="basic-addon1"
+                           id="date_input"/>
+                </div>
+                <div style="float:left;height: 20px;width: 100%">
+                </div>
+                <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px">
+                    &nbsp&nbsp姓&nbsp&nbsp名&nbsp&nbsp
+                </div>
+                <div style="float: left;width: 90%;text-align: left;font-size: 18px;padding:0px 130px 0px 0px">
+                    <input type="text" class="form-control" placeholder="请输入姓名" aria-describedby="basic-addon1"
+                           id="name_input"/>
+                </div>
+                <div style="float:left;height: 20px;width: 100%">
+                </div>
+                <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px">
+                    &nbsp&nbsp卡&nbsp&nbsp号&nbsp&nbsp
+                </div>
+                <div style="float: left;width: 90%;text-align: left;font-size: 18px;padding:0px 130px 0px 0px">
+                    <input type="text" class="form-control" placeholder="请输入卡号" aria-describedby="basic-addon1"
+                           id="card_input"/>
+                </div>
+                <div style="float:left;height: 20px;width: 100%">
+                </div>
+                <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:10px 5px 0px 0px">
+                    &nbsp&nbsp伤&nbsp&nbsp情&nbsp&nbsp
+                </div>
+                <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 0px">
+                    <input type="radio" name="injury" value="1"><span style="font-size: 16px">轻伤</span>
+                </label>
+                <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                    <input type="radio" name="injury" value="2"><span style="font-size: 16px">中度</span>
+                </label>
+                <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                    <input type="radio" name="injury" value="3"><span style="font-size: 16px">重度</span>
+                </label>
+                <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                    <input type="radio" name="injury" value="4"><span style="font-size: 16px">危重</span>
+                </label>
+                <div style="float:left;height: 20px;width: 100%">
+                </div>
+                <div style="display: block" id="add_and_change_div">
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:10px 5px 0px 0px">
+                        &nbsp&nbsp状&nbsp&nbsp态&nbsp&nbsp
+                    </div>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 0px">
+                        <input type="radio" name="state" value="1"><span style="font-size: 16px">救治成功</span>
+                    </label>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                        <input type="radio" name="state" value="2"><span style="font-size: 16px">正在救治</span>
+                    </label>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                        <input type="radio" name="state" value="3"><span style="font-size: 16px">等待救治</span>
+                    </label>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                        <input type="radio" name="state" value="4"><span style="font-size: 16px">需要转移</span>
+                    </label>
+                    <div style="float:left;height: 20px;width: 100%">
+                    </div>
+                </div>
+                <div style="display: none" id="translater_div">
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:10px 5px 0px 0px">
+                        运送方式&nbsp&nbsp
+                    </div>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 0px">
+                        <input type="radio" name="deliveryMode" value="1"><span style="font-size: 16px">机车</span>
+                    </label>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                        <input type="radio" name="deliveryMode" value="2"><span style="font-size: 16px">直升机</span>
+                    </label>
+                    <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                        <input type="radio" name="deliveryMode" value="3"><span style="font-size: 16px">轮船</span>
+                    </label>
+                    <div style="float:left;height: 20px;width: 100%">
+                    </div>
+                    <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:10px 5px 0px 0px">
+                        送达医院&nbsp&nbsp
+                    </div>
+                    <div id="translater_type">
+                        <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 0px">
+                            <input type="radio" name="hospital" value="1" checked><span
+                                style="font-size: 16px">甲医院</span>
+                        </label>
+                        <label class="radio" style="float: left;width: 15%;padding-left: 20px;padding-top: 15px">
+                            <input type="radio" name="hospital" value="2"><span style="font-size: 16px">乙医院</span>
+                        </label>
+                    </div>
+                    <div style="float:left;height: 20px;width: 100%">
+                    </div>
+                </div>
+                <div style="float: left;width: 10%;text-align: right;font-size: 18px;padding:5px 5px 0px 0px">
+                    &nbsp&nbsp职&nbsp&nbsp务&nbsp&nbsp
+                </div>
+                <div style="float: left;width: 90%;text-align: left;font-size: 18px;padding:0px 130px 0px 0px">
+                    <input type="text" class="form-control" placeholder="职务描述" aria-describedby="basic-addon1"
+                           id="position_input"/>
+                </div>
+                <div style="float:left;height: 20px;width: 100%">
+                </div>
+            </div>
+            <div class="modal-footer" id="myModalFooter">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <!--<button type="button" class="btn btn-primary" data-dismiss="modal" href="#modal-message" data-toggle="modal" id="HospitalModalSave">保存-->
+                <button type="button" class="btn btn-primary" id="HospitalModalSave">保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-message" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 30%;padding-top: 360px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body" style="height:50px;width: 100%">
+                确认提交吗？
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="HospitalModalSubmit">确认
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="hospitalBox" class="popover fade top in" role="tooltip"
+     style="display: none;max-height: 200px;min-width: 300px">
+    <div class="arrow"></div>
+    <h3 title="Popover title"></h3>
+    <div class="popover-content">ggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+    <div class="popover-content">JHHjjj</div>
+    <div class="popover-content">JHHjjj</div>
+</div>
+<script src="./js/leftDoctor1.js"></script>
